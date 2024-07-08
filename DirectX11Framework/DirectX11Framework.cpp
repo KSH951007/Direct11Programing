@@ -22,27 +22,22 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_ int       nCmdShow)
 {
   
-
-
     //1)윈도우창 등록
     MyRegisterClass(hInstance);
-
 
     //2)윈도우창 생성  애플리케이션 초기화를 수행합니다:
     if (!InitInstance (hInstance, nCmdShow))
     {
         return FALSE;
     }
-
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_DIRECTX11FRAMEWORK));
     Game game;
+    //게임 초기화 구문
     game.Init(hWnd);
 
     MSG msg = {};
 
-
-
-    // 기본 메시지 루프입니다:
+    //게임 업데이트로직 실행 구문
     while (msg.message != WM_QUIT)
     {
         if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
