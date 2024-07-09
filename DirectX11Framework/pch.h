@@ -12,7 +12,8 @@ using namespace std;
 
 #include <Windows.h>
 #include <assert.h>
-
+#include <memory>
+#include <string>
 //DX
 #include <d3d11.h>
 #include <d3dcompiler.h>
@@ -32,3 +33,5 @@ using namespace Microsoft::WRL;
 #else
 #pragma comment(lib, "DirectXTex\\DirectXTex_debug.lib")
 #endif //  _DEBUG
+
+#define CHECK(p) assert(SUCCEEDED(p)) 

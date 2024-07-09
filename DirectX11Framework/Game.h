@@ -1,5 +1,5 @@
 #pragma once
-
+class Graphics;
 class Game
 {
 public:
@@ -14,16 +14,12 @@ public:
 	void Render();
 
 private:
-	void CreateDeviceAndSwapChain();
-private:
-	HWND hwnd;
+	HWND hwnd = nullptr;
 	uint32 width = 0;
 	uint32 height = 0;
 	//DX √ ±‚»≠
 private:
-	ComPtr<ID3D11Device> device = nullptr;
-	ComPtr<ID3D11DeviceContext> deviceContext = nullptr;
-	ComPtr<IDXGISwapChain> swapChain = nullptr;
+	shared_ptr<Graphics> graphic;
 
 };
 

@@ -18,6 +18,12 @@
     <Filter Include="소스 파일\99.Headers\99.Other">
       <UniqueIdentifier>{39765065-c5e2-4540-8c3e-efae42cba245}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\98.Shaders">
+      <UniqueIdentifier>{160b4f3f-88a5-4591-b3ef-f69b498c2d69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\97.Utills">
+      <UniqueIdentifier>{23235ff1-ea94-4d7c-8343-48591054602f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -47,6 +53,9 @@
     <ClInclude Include="DirectX11Framework.h">
       <Filter>소스 파일\00.Main</Filter>
     </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>소스 파일\97.Utills</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DirectX11Framework.cpp">
@@ -57,6 +66,9 @@
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>소스 파일\99.Headers</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>소스 파일\97.Utills</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -71,5 +83,10 @@
     <Image Include="DirectX11Framework.ico">
       <Filter>리소스 파일</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Default.hlsl">
+      <Filter>소스 파일\98.Shaders</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>
